@@ -1,12 +1,12 @@
 [project.scripts]
-sociomind = "sociomind.__main__:main"
+sociomind = "nd_sociomind.__main__:main"
 
 [build-system]
 requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sociomind"
+name = "nd_sociomind"
 version = "1.0.0"
 dependencies = [
     "ruamel.yaml>=0.17.40,<0.18",
@@ -14,11 +14,11 @@ dependencies = [
     "ruamel.yaml.clib>=0.2.7; python_version<'3.13' and platform_python_implementation=='CPython'",
 ]
 
-# for development world: pip install -e .[dev]
+# for development nd_world_project: pip install -e .[dev]
 [project.optional-dependencies]
 dev = [
     "mypy>=1.10",
-    "build>=1.2.1", # convenience: lets you run `python -m build`
+    "build>=1.2.1", # convenience: lets you run `python -m builder`
 ]
 
 [tool.mypy]
@@ -29,7 +29,7 @@ ignore_missing_imports = true
 mypy_path = ["./src"]
 namespace_packages = true
 explicit_package_bases = true
-files = ["sociomind", "tests"]
+files = ["nd_sociomind", "tests"]
 exclude = '(^|/)conftest\.py$'
 
 [tool.setuptools]

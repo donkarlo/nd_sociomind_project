@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+
+\usepackage[active,tightpage]{preview}
+
+\PreviewBorder=4pt
+
+\title{}
+\date{}
+\author{Mohammad Rahmani}
+
+\begin{document}
+   \begin{preview}
+      \section*{2026-09-15 Autonomous navigation visualizer fixes}
+
+      \begin{itemize}
+         \item Restored rigid-only GPS visualization after an incorrect lane-calibration change.
+         \item The recorded Leader and Follower trajectories are no longer independently scaled or warped.
+         \item One common rotation and one common translation are applied to both trajectories, preserving recorded distances, relative geometry, and path shape.
+         \item Kept the requested 7.99 m narrowing-obstacle span.
+      \end{itemize}
+   \end{preview}
+\end{document}

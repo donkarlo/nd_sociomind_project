@@ -1,0 +1,23 @@
+\documentclass[a4paper]{article}
+
+\usepackage[active,tightpage]{preview}
+
+\PreviewBorder=4pt
+
+\title{}
+\date{}
+\author{Mohammad Rahmani}
+
+\begin{document}
+   \begin{preview}
+      \section*{2026-09-15 Autonomous navigation visualizer fixes}
+
+      \begin{itemize}
+         \item Removed the incorrect independent trajectory scaling. Leader and Follower now receive one common rigid rotation and translation only.
+         \item Reconstructed the replay arena from the original Gazebo \texttt{follow-scenario.world}: 32 m outer square, 8 m inner square, 0.05 m walls, and two opposing 4 m narrowing protrusions on the right side.
+         \item Preserved the requested 0.01 m shortening of the narrowing span, centered symmetrically.
+         \item Added a rigid 90-degree orientation resolution step so the GPS segment where the Follower moves behind the Leader is aligned with the Gazebo narrowing side without changing metric distances.
+         \item Adjusted the top-view Tarot T650 visual footprint to approximately 0.495 m radius using the Gazebo motor and rotor geometry.
+      \end{itemize}
+   \end{preview}
+\end{document}
